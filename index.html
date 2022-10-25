@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+    <link rel="icon" href="images/favicon.png">
+    <meta charset="UTF-8">
+    <title>KTÜ-ETT|Karadeniz Teknin Ünivesitesi Enerji Teknolojileri Topluluğu</title>
+    <style>
+        .border{
+            position: absolute;
+            top: 500px;
+            z-index: 88;
+            left: 710px;
+            width: 100px;
+            bottom: 0;
+height: 48px;
+        }
+        
+        body {
+            position: absolute;
+            height: 1360px;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: scroll;
+        }
+        .hr1 {
+            position: absolute;
+            top: 530px;
+            z-index: 88;
+            width: 1480px;
+            height: 1px;
+            bottom: 0;
+        }
+        hr {
+            position: absolute;
+            top: 500px;
+            z-index: 88;
+            width: 1480px;
+            height: 1px;
+            bottom: 0;
+        }
+
+        
+
+        .sauravideo {
+
+            position: absolute;
+            top: 200px;
+            left: 300px;
+            bottom: 0;
+            font-weight: 300;
+            font-family: 'Courier New', Courier, monospace;
+            word-spacing: 2px;
+            z-index: 88
+        }
+        .teknofestmetin1{
+            position: absolute;
+            top: 800px;
+            left: 800px;
+            bottom: 0;
+            font-weight: 300;
+            font-family: 'Courier New', Courier, monospace;
+            word-spacing: 1px;
+            z-index: 88
+
+        }
+        .teknofestmetin {
+            position: absolute;
+            top: 700px;
+            left: 800px;
+            bottom: 0;
+            font-weight: 300;
+            font-family: 'Courier New', Courier, monospace;
+            word-spacing: 1px;
+            z-index: 88
+        }
+
+        .saurametin3 {
+            position: absolute;
+            top: 300px;
+            left: 800px;
+            bottom: 0;
+            font-weight: 300;
+            font-family: 'Courier New', Courier, monospace;
+            word-spacing: 2px;
+            z-index: 88
+        }
+
+        .saurametin2 {
+            position: absolute;
+            top: 230px;
+            left: 800px;
+            bottom: 0;
+            font-weight: 300;
+            font-family: 'Courier New', Courier, monospace;
+            word-spacing: 2px;
+
+        }
+
+        .saurametin1 {
+            position: absolute;
+            top: 400px;
+            left: 800px;
+            bottom: 0;
+            font-weight: 300;
+            font-family: 'Courier New', Courier, monospace;
+            word-spacing: 2px;
+
+        }
+
+        .saurametin {
+            position: absolute;
+            top: 200px;
+            left: 800px;
+            bottom: 0;
+            font-weight: 300;
+            font-family: 'Courier New', Courier, monospace;
+            word-spacing: 2px;
+
+        }
+
+        .başlıkteknofest {
+            font-size: small;
+            position: absolute;
+            top: 630px;
+            left: 500px;
+            bottom: 0;
+            font-weight: 300;
+            font-family: 'Courier New', Courier, monospace;
+            word-spacing: 8px;
+            z-index: 88
+        }
+
+        .saurabaslık {
+            position: absolute;
+            left: 500px;
+            top: 100px;
+            font-family: 'Courier New', Courier, monospace;
+            word-spacing: 3px;
+            z-index: 88
+        }
+        .yayımtarihiteknofest {
+            font-size: small;
+            position: absolute;
+            top: 600px;
+            left: 1100px;
+            bottom: 0;
+            font-weight: 300;
+            font-family: 'Courier New', Courier, monospace;
+            word-spacing: 1/10px;
+            z-index: 88
+        }
+        .yayımtarihsaura {
+            font-size: small;
+            position: absolute;
+            top: 90px;
+            left: 1100px;
+            bottom: 0;
+            font-family: 'Courier New', Courier, monospace;
+            word-spacing: 1/10px;
+            z-index: 88
+        }
+
+        .ileti {
+            font-size: x-large;
+            position: absolute;
+            left: 50px;
+            top: 100px;
+            font-family: 'Courier New', Courier, monospace;
+            word-spacing: 3px;
+            z-index: 88
+        }
+
+        .iletioku {
+            position: absolute;
+            left: 70px;
+            top: 150px;
+            width: 70px;
+        }
+
+        .menu {
+
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            top: 0;
+            margin-left: -375px;
+            /* negative margin equal to half the width */
+            width: 750px;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .anamenubarı {
+
+            background-color: rgb(255, 255, 255);
+        }
+
+        .anamenubarı a {
+            float: left;
+            font-size: 16px;
+            color: rgb(66, 62, 62);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .asagınmebarı {
+            float: left;
+
+        }
+
+        .asagınmebarı .asagınmebarıhak {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: rgb(66, 62, 62);
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+
+        }
+
+        .anamenubarı a:hover,
+        .asagınmebarı:hover .asagınmebarıhak {
+            background-color: rgb(125, 121, 121);
+        }
+
+        .asagınmebarıcerık {
+            display: none;
+            position: absolute;
+            left: 0;
+            background-color: rgb(98, 93, 93);
+            width: 100%;
+            z-index: 1;
+
+        }
+
+        .asagınmebarıcerık a {
+
+            float: left;
+            color: white;
+            text-decoration: none;
+
+
+        }
+
+        .asagınmebarıcerık a:hover {
+
+            background-color: #eee;
+            color: black;
+
+        }
+
+        .asagınmebarı:hover .asagınmebarıcerık {
+            display: block;
+        }
+
+        .footer {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 200px;
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        /*deneme*/
+        .deneme{
+    position: absolute;
+    top: 700px;
+    width: 450px;
+    left: 305px;}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+
+
+
+    </style>
+
+
+
+
+</head>
+
+<body>
+    <hr class="hr1">
+    <img class="border" src="images/favicon.png" alt="">
+    <img class="iletioku" src="images/iletioku.png" alt="">
+    <iframe class="sauravideo" width="450" height="300" src="https://www.youtube.com/embed/Nw0WVCp3erI"
+        title="Enerji Teknolojileri Topluluğu - Saura ilk Test Sürüşü 2021" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </iframe>
+
+
+    
+    <div class="başlıksaura">
+        <p class="ileti"><b>İletiler</b></p>
+
+        <p class="yayımtarihsaura"><small>YAYIM TARİHİ : 14 NİSAN 2021</small></p>
+        <p2 class="saurabaslık"><b><big>Saura İlk Test Sürüşünü Gerçekleştirdi</big></b></p2>
+
+
+    </div>
+    <p class="saurametin">
+
+        Saura ilk test sürüşünü Ocak 2021’de gerçekleştirdi…
+    </p>
+    <p class="saurametin2"> Bu zorlu pandemi sürecinde başta ailelerimiz olmak üzere bizden
+        desteğini esirgemeyen sponsorlarımıza ve teknik danışmanlarımıza
+        teşekkür ederiz.
+    </p>
+    <p class="saurametin3">
+        Kurulduğumuz yıldan itibaren bu aileye büyük emek veren, geliştiren,
+        daha ileri taşıyan ve bu yolda bize örnek olan yine
+        ülkemizi gururlandıracak daha ileriye götürecek projelerde yer almasının yanında
+        Saura’nın tasarımını da yaparak bizlerden desteğini esirgemeyen Celal ADANUR ‘a ayrıca teşekkür ederiz.
+    </p>
+    <p class="saurametin1">Her zaman daha ileriye…</p>
+
+    <hr>
+    <div class="başlıkteknofest">
+        <p2 ><b><big>Enerji Teknolojileri Topluluğu TEKNOFEST’te</big></p>
+        </p>
+    </div>
+
+
+
+
+    <p class="yayımtarihiteknofest"><small>YAYIM TARİHİ : 7 ŞUBAT 2020</small></p>
+    <p class="teknofestmetin">İlki geçtiğimiz yıl düzenlenen ve dünyanın en büyük ikinci havacılık
+        festivali olmayı başaran TEKNOFEST İstanbul Havacılık, Uzay ve
+        Teknoloji Festivali, bu yıl 17-22 Eylül’de Atatürk Havalimanı’nda
+        gerçekleştirildi.</p>
+    <p class="teknofestmetin1">Türkiye Teknoloji Takımı Vakfı (T3 Vakfı) ile Sanayi ve Teknoloji
+         Bakanlığı öncülüğünde, bizim de şehrimizi ve üniversitemizi gururla
+          temsil ettiğimiz, ülkenin önemli kurum ve firmalarının destekleriyle
+           düzenlenen festivale katılım, bu yıl rekor kırarak 1 milyon 720 bin kişi 
+           oldu.</p>
+
+
+
+
+
+     <div class="deneme">
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="images/teknofest1.jpeg" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="images/teknofest2.jpeg" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="images/teknofest3.jpeg" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="menu">
+        <div class="anamenubarı">
+            <a href="anasayfa.html">Anasayfa</a>
+            <div class="asagınmebarı">
+
+                <button class="asagınmebarıhak">Hakkımızda</button>
+
+                <div class="asagınmebarıcerık">
+                    <a href="hakkında.html">ETT Hakkında</a>
+                    <a href="takımımız.html">Başarılarımız</a>
+                    <a href="yarışlar.html">AR-GE Çalışmalarımız</a>
+                    <a href="projeler.html">Basında Biz</a>
+                </div>
+            </div>
+            <div class="asagınmebarı">
+                <button class="asagınmebarıhak">Takımımız</button>
+                <div class="asagınmebarıcerık">
+                    <a href="hakkımızda.html">Takım Üyelerimiz</a>
+                    <a href="hakkımızda.html">Danışmanlarımız</a>
+                </div>
+            </div>
+            <div class="asagınmebarı">
+                <button class="asagınmebarıhak">Yarışlar</button>
+                <div class="asagınmebarıcerık">
+                    <a href="hakkımızda.html">TÜBİTAK Efficiency Challenge Electric Vehicle</a>
+                    <a href="hakkımızda.html">Shell Eco-marathon Türkiye</a>
+                    <a href="hakkımızda.html">Shell Eco-marathon Europe</a>
+                </div>
+            </div>
+            <div class="asagınmebarı">
+                <button class="asagınmebarıhak">Projeler</button>
+                <div class="asagınmebarıcerık">
+                    <a href="hakkımızda.html">Elektrik-Bataryalı Araç</a>
+                    <a href="hakkımızda.html">Hidrojen Yakıtlı Araç</a>
+                </div>
+            </div>
+            <div class="asagınmebarı">
+                <button class="asagınmebarıhak">Sponsorluk</button>
+                <div class="asagınmebarıcerık">
+                    <a href="hakkımızda.html">Sponsorlarımız</a>
+                    <a href="hakkımızda.html">Sponsorluk Dosyamız</a>
+                    <a href="hakkımızda.html">Kurumsal Destek</a>
+                    <a href="hakkımızda.html">Bireysel Destek</a>
+                </div>
+            </div>
+            <div class="asagınmebarı">
+                <button class="asagınmebarıhak">Galeri</button>
+                <div class="asagınmebarıcerık">
+                    <a href="hakkımızda.html">ELEKTROKTÜ</a>
+                    <a href="hakkımızda.html">HİDROKTÜ</a>
+                    <a href="hakkımızda.html">e-VİRA</a>
+                    <a href="hakkımızda.html">H-VİRA</a>
+                    <a href="hakkımızda.html">SIRIUS</a>
+                    <a href="hakkımızda.html">Composite Sport Vehicle (CSV)</a>
+                    <a href="hakkımızda.html">SIMURG</a>
+                    <a href="hakkımızda.html">SIMURG FC ( FUEL CELL)</a>
+                </div>
+            </div>
+            <a href="iletişim.html">İletişim</a>
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>Ana Sponsor</p>
+        <img width="200px" src="images/MEKAP.jpg" alt="">
+
+
+    </div>
+    </div>
+</body>
+
+</html>

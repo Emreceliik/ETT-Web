@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    
+    <link rel="icon" href="images/favicon.png">
+    <meta charset="UTF-8">
+    <title>KTÜ-ETT|Karadeniz Teknin Ünivesitesi Enerji Teknolojileri Topluluğu</title>
+    <style>
+        .darkmode--activated .metinler {
+            color: #0c90ed;
+        }
+        /*ana menu barını indirdiğinde arkada çıkan renk*/
+        .darkmode--activated .asagınmebarıcerık {
+            background-color: #232323 ;
+
+        }
+        /**/
+        .darkmode--activated .hr2 {
+            isolation: isolate;
+            border-color: #0c90ed;
+        }
+        /**/
+        .darkmode--activated .hr1 {
+            isolation: isolate;
+            border-color: #0c90ed;
+
+        }
+        /*hiçbir şey değiştirmiyor*/
+        .darkmode--activated .anamenubarı {
+            isolation: isolate;
+            background-color: #ed0c0c;
+        }
+
+        /*ana menudeki anasayfa ve iletişim ve ana menu barının ne renk olucağı*/
+        .darkmode--activated .anamenubarı a {
+            isolation: isolate;
+            color: white;
+            
+        }
+        /*menüdeki yazıların hangi renk olduğu*/
+        .darkmode--activated .asagınmebarı .asagınmebarıhak {
+            isolation: isolate;
+            color: #0c90ed;
+        }
+        /* menüdeki ve aşağı inme barındaki yazının üstüne geldiğinde hangi renk olduğu*/
+        .darkmode--activated .asagınmebarı:hover .asagınmebarıhak  {
+            isolation: isolate;
+            color:  #0c90ed;
+        }
+        /*aşağı inme barındaki içeriklerin rengi*/
+        .darkmode--activated .asagınmebarıcerık a {
+            isolation: isolate;
+            color:#0c90ed ;
+        }
+        /*aşağı inme barındaki içeriklerin üstüne geldiğinde arka plan rengi ve rengi*/
+        .darkmode--activated .asagınmebarıcerık a:hover{
+            color: #ed0c0c;
+            background-color: #ed0c0c;
+
+        }
+
+        /**/
+        .darkmode--activated .bütün-metinler {
+            color: #0c90ed;
+
+        }
+        .darkmode--activated .footer {
+            background-color: black;
+            color: #0c90ed;
+        }
+        /*ileti oku değişimi*/
+        .darkmode--activated .iletioku{
+            display: none;
+        
+        }
+        body {
+            position: absolute;
+            height: 1360px;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: scroll;
+        }
+        .logo{  
+            position: absolute;
+            left: -20px;
+            top: -30px;
+
+        }
+        .baslik{
+            position: absolute;
+            left: 679px;
+            top: 80px;
+            font-family: 'Times New Roman', Times, serif;
+            word-spacing: 3px;
+            z-index: 88
+        }
+        .p0,.p1,.p2,.p3,.p4,.p5,.p6,.p7,.p8,.p9
+        {
+            font-weight: 300;
+            font-family: 'Times New Roman', Times, serif;
+            word-spacing: 2px;
+            position: absolute;
+        }
+           .p0{
+            left: 180px;
+            top:  110px;
+            font-size: xx-large;
+           } 
+           .p1{
+                left: 180px;
+                top: 180px;
+
+           }
+           .p2{
+                left: 180px;
+                top: 290px;
+
+           }
+           .p3{
+                left: 180px;
+                top: 320px;
+
+           }
+           .p4{
+                left: 180px;
+                top: 360px;
+
+           }
+           .p5{
+                left: 180px;
+                top: 410px;
+
+           }
+           .p6{
+                left: 180px;
+                top: 450px;
+
+           }.p7{
+                left: 180px;
+                top: 490px;
+
+           }.p8{
+                left: 180px;
+                top: 540px;
+
+           }.p9{
+                left: 180px;
+                top: 600px;
+
+           }
+           .hakkındafoto{
+            position: absolute;
+            width: 70%;
+            top: 630px;
+            left: 230px;
+
+
+        }
+
+    
+        .menu {
+
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            top: 0;
+            margin-left: -375px;
+            /* negative margin equal to half the width */
+            width: 750px;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .anamenubarı {
+
+            background-color: rgb(255, 255, 255);
+        }
+
+        .anamenubarı a {
+            float: left;
+            font-size: 16px;
+            color: rgb(66, 62, 62);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .asagınmebarı {
+            float: left;
+
+        }
+
+        .asagınmebarı .asagınmebarıhak {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: rgb(66, 62, 62);
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+
+        }
+
+        .anamenubarı a:hover,
+        .asagınmebarı:hover .asagınmebarıhak {
+            background-color: rgb(125, 121, 121);
+        }
+
+        .asagınmebarıcerık {
+            display: none;
+            position: absolute;
+            left: 0;
+            background-color: rgb(98, 93, 93);
+            width: 100%;
+            z-index: 1;
+
+        }
+
+        .asagınmebarıcerık a {
+
+            float: left;
+            color: white;
+            text-decoration: none;
+
+
+        }
+
+        .asagınmebarıcerık a:hover {
+
+            background-color: #eee;
+            color: black;
+
+        }
+
+        .asagınmebarı:hover .asagınmebarıcerık {
+            display: block;
+        }
+
+        .footer {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 200px;
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+
+
+
+
+    </style>
+
+
+
+
+</head>
+
+<body>  
+    <div class="metinler">
+            <h1 class="baslik">ETT HAKKINDA</h1>
+            <p class="p0"><bigger>PROJE HAKKINDA BİLGİLER</p>
+            <p class="p1">TÜBİTAK’ın düzenlemiş olduğu “Alternatif Enerjili Araç Yarışları”na her sene olduğu gibi bu sene de 
+                Karadeniz Teknik Üniversitesi Enerji Teknolojileri Topluluğu olarak katılmayı hedeflemekteyiz.
+                Hidromobil Projesi kapsamında tasarladığımız aracımız, alternatif enerji kaynakları ile çalışır,
+                aynı zamanda çevre dostudur. Bu proje ile geleceğin alternatif enerji kaynaklarından birisi olan
+                hidrojen ile çalışan araçların ülkemizdeki örnekleri yapılmaya çalışılmaktadır.</p>
+            <p class="p2">Projemizin çalışma prensibi hakkında bilgi verecek olursak;</p>
+            <p class="p3"><b><big> Hidromobil Projesi;</b></big></p>
+            <p class="p4">• Hidromobil projesi kapsamında tasarladığımız aracımız en genel anlamda elektrik enerjisi ile çalışmaktadır.
+                 Araca gereken elektrik enerjisi, yakıt pili aracılığıyla hidrojenden sağlanmaktadır.</p>
+            <p class="p5">• Elde edilen elektrik enerjisi, elektrik motoruna aktarılarak gerekli tahrik sağlanır.</p>
+            <p class="p6">• Aracın diğer aksamları günlük hayatta kullandığımız otomobillerden farklı değildir.
+                Tek farklı tarafı, sıradan araçlar gibi karbon monoksit gazı değil de, atık olarak saf su bırakmasıdır.</p>
+            <p class="p7">Elektromobil Projesi;</p>
+            <p class="p8">• Elektromobil projesi kapsamında tasarladığımız araç, en genel anlamda bataryalardan veya diğer enerji
+                 kaynaklarından aldığı elektrik enerjisi ile çalışmaktadır.</p>
+            <p class="p9">• Tasarladığımız araç sıfır emisyonla çalışıp tamamen çevre dostu bir araçtır.</p>
+        </div>
+                <img class="hakkındafoto" src="images/hakkındafoto.jpg" alt="">
+                <img class="logo" src="images/favicon.png" alt="">
+
+                <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+                <script>
+                  const options = {
+                  top: '32px',
+                  bottom: '650px', // default: '32px'
+                  right: '32px', // default: '32px'
+                  left: 'unset', // default: 'unset'
+                  time: '0.7s', // default: '0.3s'
+                  mixColor: 'white', 
+                  // mixColor: '#e6e2e2', // default: '#fff'[karşıt renk]
+                  backgroundColor: 'white',  // default: '#fff'
+                  buttonColorDark: '#100f2c',  // default: '#100f2c'
+                  buttonColorLight: '#0c90ed', // default: '#fff'
+                  saveInCookies: false, // default: true,
+                  label: '🌓', // default: ''
+                  autoMatchOsTheme: false // default: true
+                }
+                
+                const darkmode = new Darkmode(options);
+                darkmode.showWidget();
+                </script>
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="menu">
+                    <div class="anamenubarı"><div class="asagınmebarı">
+                        <a class="asagınmebarıhak" href="anasayfa.html">Anasayfa</a> </div>
+                        <div class="asagınmebarı">
+            
+                            <button class="asagınmebarıhak">Hakkımızda</button>
+            
+                            <div class="asagınmebarıcerık">
+                                <a href="hakkında.html">ETT Hakkında</a>
+                                <a href="takımımız.html">Başarılarımız</a>
+                                <a href="yarışlar.html">AR-GE Çalışmalarımız</a>
+                                <a href="projeler.html">Basında Biz</a>
+                            </div>
+                        </div>
+                        <div class="asagınmebarı">
+                            <button class="asagınmebarıhak">Takımımız</button>
+                            <div class="asagınmebarıcerık">
+                                <a href="hakkımızda.html">Takım Üyelerimiz</a>
+                                <a href="hakkımızda.html">Danışmanlarımız</a>
+                            </div>
+                        </div>
+                        <div class="asagınmebarı">
+                            <button class="asagınmebarıhak">Yarışlar</button>
+                            <div class="asagınmebarıcerık">
+                                <a href="hakkımızda.html">TÜBİTAK Efficiency Challenge Electric Vehicle</a>
+                                <a href="hakkımızda.html">Shell Eco-marathon Türkiye</a>
+                                <a href="hakkımızda.html">Shell Eco-marathon Europe</a>
+                            </div>
+                        </div>
+                        <div class="asagınmebarı">
+                            <button class="asagınmebarıhak">Projeler</button>
+                            <div class="asagınmebarıcerık">
+                                <a href="hakkımızda.html">Elektrik-Bataryalı Araç</a>
+                                <a href="hakkımızda.html">Hidrojen Yakıtlı Araç</a>
+                            </div>
+                        </div>
+                        <div class="asagınmebarı">
+                            <button class="asagınmebarıhak">Sponsorluk</button>
+                            <div class="asagınmebarıcerık">
+                                <a href="hakkımızda.html">Sponsorlarımız</a>
+                                <a href="hakkımızda.html">Sponsorluk Dosyamız</a>
+                                <a href="hakkımızda.html">Kurumsal Destek</a>
+                                <a href="hakkımızda.html">Bireysel Destek</a>
+                            </div>
+                        </div>
+                        <div class="asagınmebarı">
+                            <button class="asagınmebarıhak">Galeri</button>
+                            <div class="asagınmebarıcerık">
+                                <a href="hakkımızda.html">ELEKTROKTÜ</a>
+                                <a href="hakkımızda.html">HİDROKTÜ</a>
+                                <a href="hakkımızda.html">e-VİRA</a>
+                                <a href="hakkımızda.html">H-VİRA</a>
+                                <a href="hakkımızda.html">SIRIUS</a>
+                                <a href="hakkımızda.html">Composite Sport Vehicle (CSV)</a>
+                                <a href="hakkımızda.html">SIMURG</a>
+                                <a href="hakkımızda.html">SIMURG FC ( FUEL CELL)</a>
+                            </div>
+                        </div>
+            
+                        <div class="asagınmebarı">
+                        <a href="iletişim.html" class="asagınmebarıhak" >İletişim</a>
+                         </div>
+                    </div>
+            
+                </div>
+            
+                <div class="footer">
+                    <p>Ana Sponsor</p>
+                    <img width="200px" src="images/MEKAP.jpg" alt="">
+            
+            
+                </div>
+                </div>
+
+    <div class="footer">
+        <p>Ana Sponsor</p>
+        <img width="200px" src="images/MEKAP.jpg" alt="">
+
+
+    </div>
+    </div>
+</body>
+
+</html>

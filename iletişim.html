@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+    <link rel="icon" href="images/favicon.png">
+    <meta charset="UTF-8">
+    <title>KTÜ-ETT|Karadeniz Teknin Ünivesitesi Enerji Teknolojileri Topluluğu</title>
+    <style>
+        body {
+            position: absolute;
+            height: 1360px;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: scroll;
+        }
+        
+        .menu {
+
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            top: 0;
+            margin-left: -375px;
+            /* negative margin equal to half the width */
+            width: 750px;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .anamenubarı {
+
+            background-color: rgb(255, 255, 255);
+        }
+
+        .anamenubarı a {
+            float: left;
+            font-size: 16px;
+            color: rgb(66, 62, 62);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .asagınmebarı {
+            float: left;
+
+        }
+
+        .asagınmebarı .asagınmebarıhak {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: rgb(66, 62, 62);
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+
+        }
+
+        .anamenubarı a:hover,
+        .asagınmebarı:hover .asagınmebarıhak {
+            background-color: rgb(125, 121, 121);
+        }
+
+        .asagınmebarıcerık {
+            display: none;
+            position: absolute;
+            left: 0;
+            background-color: rgb(98, 93, 93);
+            width: 100%;
+            z-index: 1;
+
+        }
+
+        .asagınmebarıcerık a {
+
+            float: left;
+            color: white;
+            text-decoration: none;
+
+
+        }
+
+        .asagınmebarıcerık a:hover {
+
+            background-color: #eee;
+            color: black;
+
+        }
+
+        .asagınmebarı:hover .asagınmebarıcerık {
+            display: block;
+        }
+
+        .footer {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 200px;
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .gondertusu{
+                border: 1px solid #2afe00;
+                background: #2afe00;
+                height: 25px;
+                padding: 5px 50px 5px 50px;
+                margin: 0;
+                color: #ffffff;
+           } 
+           .gondertusu:hover{
+                border: 1px solid #2afe00;
+                background: green;
+                height: 25px;
+                padding: 5px 50px 5px 50px;
+                margin: 0;
+                color: black;
+                cursor:pointer;
+           } 
+           .kayıtform{
+            position: absolute;
+            top: 130px;
+            left : 370px;
+           }
+           p{
+            font-family: 'Courier New', Courier, monospace;
+            font-size: xx-large;
+
+
+           }
+
+
+    </style>
+
+
+
+
+</head>
+
+<body><div class="kayıtform">
+    <p align="center" ><b></b> İletişim İçin Bilgilerinizi Giriniz</b></p>
+    <form action="sonuc.php" method="post">
+        <table align="center" >
+            <tr >
+                <td> Adınız Soyadınız</td>
+                <td>:</td>
+                <td><input type="text" name="adisoyadi"> </td>
+            </tr>
+            <tr>
+                <td> Telefon Numaranız</td>
+                <td>:</td>
+                <td><input type="text" name="telefon"> </td>
+            </tr>
+            <tr>
+                <td> Email Adresiniz</td>
+                <td>:</td>
+                <td><input type="email" name="email"> </td>
+            </tr>
+            <tr>
+                <td> Konu</td>
+                <td>:</td>
+                <td><input type="text" name="konu"> </td>
+            </tr>
+            <tr>
+                <td valign="top"> Mesajınız</td>
+                <td valign="top">:</td>
+                <td><textarea height="100px"  name="mesaj"></textarea> </td>
+            </tr>
+            <tr>
+                <td>&nbsp</td>
+                <td>&nbsp</td>
+                <td align="right"><input class="gondertusu"  type="submit" value="Gönder"></td>
+            </tr>
+        </table>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="menu">
+        <div class="anamenubarı"><div class="asagınmebarı">
+            <a class="asagınmebarıhak" href="anasayfa.html">Anasayfa</a> </div>
+            <div class="asagınmebarı">
+
+                <button class="asagınmebarıhak">Hakkımızda</button>
+
+                <div class="asagınmebarıcerık">
+                    <a href="hakkında.html">ETT Hakkında</a>
+                    <a href="takımımız.html">Başarılarımız</a>
+                    <a href="yarışlar.html">AR-GE Çalışmalarımız</a>
+                    <a href="projeler.html">Basında Biz</a>
+                </div>
+            </div>
+            <div class="asagınmebarı">
+                <button class="asagınmebarıhak">Takımımız</button>
+                <div class="asagınmebarıcerık">
+                    <a href="hakkımızda.html">Takım Üyelerimiz</a>
+                    <a href="hakkımızda.html">Danışmanlarımız</a>
+                </div>
+            </div>
+            <div class="asagınmebarı">
+                <button class="asagınmebarıhak">Yarışlar</button>
+                <div class="asagınmebarıcerık">
+                    <a href="hakkımızda.html">TÜBİTAK Efficiency Challenge Electric Vehicle</a>
+                    <a href="hakkımızda.html">Shell Eco-marathon Türkiye</a>
+                    <a href="hakkımızda.html">Shell Eco-marathon Europe</a>
+                </div>
+            </div>
+            <div class="asagınmebarı">
+                <button class="asagınmebarıhak">Projeler</button>
+                <div class="asagınmebarıcerık">
+                    <a href="hakkımızda.html">Elektrik-Bataryalı Araç</a>
+                    <a href="hakkımızda.html">Hidrojen Yakıtlı Araç</a>
+                </div>
+            </div>
+            <div class="asagınmebarı">
+                <button class="asagınmebarıhak">Sponsorluk</button>
+                <div class="asagınmebarıcerık">
+                    <a href="hakkımızda.html">Sponsorlarımız</a>
+                    <a href="hakkımızda.html">Sponsorluk Dosyamız</a>
+                    <a href="hakkımızda.html">Kurumsal Destek</a>
+                    <a href="hakkımızda.html">Bireysel Destek</a>
+                </div>
+            </div>
+            <div class="asagınmebarı">
+                <button class="asagınmebarıhak">Galeri</button>
+                <div class="asagınmebarıcerık">
+                    <a href="hakkımızda.html">ELEKTROKTÜ</a>
+                    <a href="hakkımızda.html">HİDROKTÜ</a>
+                    <a href="hakkımızda.html">e-VİRA</a>
+                    <a href="hakkımızda.html">H-VİRA</a>
+                    <a href="hakkımızda.html">SIRIUS</a>
+                    <a href="hakkımızda.html">Composite Sport Vehicle (CSV)</a>
+                    <a href="hakkımızda.html">SIMURG</a>
+                    <a href="hakkımızda.html">SIMURG FC ( FUEL CELL)</a>
+                </div>
+            </div>
+
+            <div class="asagınmebarı">
+            <a href="iletişim.html" class="asagınmebarıhak" >İletişim</a>
+             </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
